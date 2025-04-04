@@ -117,3 +117,13 @@ val triggersFishing = [
 for item in triggersFishing {
     <tag:items:stardew_fishing:starts_minigame>.add(item);
 }
+
+# Remove Tags
+val tagsToRemove = [
+    <tag:worldgen/biome:biomemakeover:has_structure/ghost_town>,
+    <tag:worldgen/biome:biomemakeover:has_structure/sunken_ruin>,
+] as MCTag[];
+
+for tag in tagsToRemove {
+    tag.clear();
+}
