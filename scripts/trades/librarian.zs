@@ -50,9 +50,14 @@ villagerTrades.addTrade(librarian, 3, (entity, random) => {
         "minecraft:binding_curse",
         "allurement:ascension_curse",
         "allurement:fleeting_curse",
+        "biomemakeover:enfeeblement_curse",
+        "biomemakeover:depth_curse",
+        "biomemakeover:flammability_curse",
+        "biomemakeover:unwieldiness_curse",
+        "biomemakeover:inaccuracy_curse",
     ] as string[];
     
-  return new MerchantOffer(emerald * 9, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1, id: curses[random.nextInt(4)]}]}), 3, 20, 0.05);
+  return new MerchantOffer(emerald * 9, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1, id: curses[random.nextInt(9)]}]}), 3, 20, 0.05);
 });
 
 # Level 4
@@ -69,13 +74,17 @@ for item, value in levelFourSell {
 
 villagerTrades.addTrade(librarian, 4, (entity, random) => {
     val curses = [
-        "majruszsenchantments:breaking_curse",
+        "biomemakeover:decay_curse",
+        "biomemakeover:insomnia_curse",
+        "biomemakeover:conductivity_curse",
+        "biomemakeover:suffocation_curse",
+        "biomemakeover:buckling_curse",
         "majruszsenchantments:corrosion_curse",
         "majruszsenchantments:fatigue_curse",
         "majruszsenchantments:slippery_curse",
     ] as string[];
     
-  return new MerchantOffer(emerald * 9, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1, id: curses[random.nextInt(4)]}]}), 3, 22, 0.05);
+  return new MerchantOffer(emerald * 9, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1, id: curses[random.nextInt(8)]}]}), 3, 22, 0.05);
 });
 
 # Level 5
