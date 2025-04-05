@@ -13,9 +13,11 @@ WorldgenEvents.remove(event => {
     event.removeFeatureById('local_modifications', [
         'biomemakeover:mesmerite_boulder',
     ])
+    event.removeFeatureById('surface_structures', [
+        'biomemakeover:surface_fossil',
+    ])
     event.removeFeatureById('underground_ores', [
         'biomemakeover:mesmerite_underground',
-        'biomemakeover:df_trees'
     ])
     event.removeFeatureById('top_layer_modification', [
         'biomemakeover:peat',
@@ -34,8 +36,6 @@ WorldgenEvents.remove(event => {
         'biomemakeover:barrel_cactus',
         'biomemakeover:saguaro_cactus',
         'biomemakeover:wild_mushrooms',
-        'biomemakeover:df_grass',
-        'biomemakeover:df_tall_grass',
         'biomemakeover:df_flowers',
     ])
 });
