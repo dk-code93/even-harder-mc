@@ -34,7 +34,6 @@ WorldgenEvents.remove(event => {
         'biomemakeover:swamp_flowers',
         'biomemakeover:small_and_flowered_pads',
         'biomemakeover:barrel_cactus',
-        'biomemakeover:saguaro_cactus',
         'biomemakeover:wild_mushrooms',
         'biomemakeover:df_flowers',
     ])

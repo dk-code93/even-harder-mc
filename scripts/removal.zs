@@ -3,6 +3,9 @@ import crafttweaker.api.recipe.CraftingTableRecipeManager;
 import crafttweaker.api.recipe.FurnaceRecipeManager;
 import crafttweaker.api.recipe.StoneCutterManager;
 import crafttweaker.api.item.IItemStack;
+import mods.jeitweaker.Jei;
+import mods.jeitweaker.ingredient.JeiIngredient;
+import crafttweaker.api.text.Component;
 
 #Crafting Table
 val craftingRemovalByName = [
@@ -100,4 +103,99 @@ val stonecutterRemoval = [
 
 for recipe in stonecutterRemoval {
     stoneCutter.removeByName(recipe);
+}
+
+# Remove and hide in JEI
+val toRemoveAndHide = [
+    <item:biomemakeover:swamp_cypress_sapling>,
+    <item:biomemakeover:swamp_cypress_leaves>,
+    <item:biomemakeover:swamp_cypress_log>,
+    <item:biomemakeover:stripped_swamp_cypress_log>,
+    <item:biomemakeover:swamp_cypress_planks>,
+    <item:biomemakeover:swamp_cypress_slab>,
+    <item:biomemakeover:swamp_cypress_stairs>,
+    <item:biomemakeover:swamp_cypress_fence>,
+    <item:biomemakeover:swamp_cypress_fence_gate>,
+    <item:biomemakeover:swamp_cypress_wood>,
+    <item:biomemakeover:stripped_swamp_cypress_wood>,
+    <item:biomemakeover:swamp_cypress_pressure_plate>,
+    <item:biomemakeover:swamp_cypress_button>,
+    <item:biomemakeover:swamp_cypress_trapdoor>,
+    <item:biomemakeover:swamp_cypress_door>,
+    <item:biomemakeover:swamp_cypress_sign>,
+    <item:biomemakeover:swamp_cypress_boat>,
+    <item:biomemakeover:swamp_cypress_chest_boat>,
+    <item:immersive_weathering:biomemakeover/swamp_cypress_leaf_pile>,
+    <item:immersive_weathering:biomemakeover/swamp_cypress_bark>,
+
+    <item:biomemakeover:willowing_branches>,
+    <item:biomemakeover:willow_sapling>,
+    <item:biomemakeover:willow_leaves>,
+    <item:biomemakeover:willow_log>,
+    <item:biomemakeover:stripped_willow_log>,
+    <item:biomemakeover:willow_planks>,
+    <item:biomemakeover:willow_slab>,
+    <item:biomemakeover:willow_stairs>,
+    <item:biomemakeover:willow_fence>,
+    <item:biomemakeover:willow_fence_gate>,
+    <item:biomemakeover:willow_wood>,
+    <item:biomemakeover:stripped_willow_wood>,
+    <item:biomemakeover:willow_pressure_plate>,
+    <item:biomemakeover:willow_button>,
+    <item:biomemakeover:willow_trapdoor>,
+    <item:biomemakeover:willow_door>,
+    <item:biomemakeover:willow_sign>,
+    <item:biomemakeover:willow_boat>,
+    <item:biomemakeover:willow_chest_boat>,
+    <item:immersive_weathering:biomemakeover/willow_leaf_pile>,
+    <item:immersive_weathering:biomemakeover/willow_bark>,
+
+    <item:biomemakeover:blighted_balsa_sapling>,
+    <item:biomemakeover:blighted_balsa_leaves>,
+    <item:biomemakeover:blighted_balsa_log>,
+    <item:biomemakeover:stripped_blighted_balsa_log>,
+    <item:biomemakeover:blighted_balsa_planks>,
+    <item:biomemakeover:blighted_balsa_slab>,
+    <item:biomemakeover:blighted_balsa_stairs>,
+    <item:biomemakeover:blighted_balsa_fence>,
+    <item:biomemakeover:blighted_balsa_fence_gate>,
+    <item:biomemakeover:blighted_balsa_wood>,
+    <item:biomemakeover:stripped_blighted_balsa_wood>,
+    <item:biomemakeover:blighted_balsa_pressure_plate>,
+    <item:biomemakeover:blighted_balsa_button>,
+    <item:biomemakeover:blighted_balsa_trapdoor>,
+    <item:biomemakeover:blighted_balsa_door>,
+    <item:biomemakeover:blighted_balsa_sign>,
+    <item:biomemakeover:blighted_balsa_boat>,
+    <item:biomemakeover:blighted_balsa_chest_boat>,
+    <item:immersive_weathering:biomemakeover/blighted_balsa_leaf_pile>,
+    <item:immersive_weathering:biomemakeover/blighted_balsa_bark>,
+
+    <item:biomemakeover:mesmerite>,
+    <item:biomemakeover:polished_mesmerite>,
+    <item:biomemakeover:mesmerite_wall>,
+    <item:biomemakeover:mesmerite_slab>,
+    <item:biomemakeover:mesmerite_stairs>,
+    <item:biomemakeover:polished_mesmerite_wall>,
+    <item:biomemakeover:polished_mesmerite_stairs>,
+    <item:biomemakeover:polished_mesmerite_slab>,
+    
+    <item:biomemakeover:altar>,
+    <item:biomemakeover:illunite_block>,
+    <item:biomemakeover:illunite_shard>,
+    <item:biomemakeover:illunite_cluster>,
+    <item:biomemakeover:swamp_azalea>,
+    <item:biomemakeover:saguaro_cactus>,
+    <item:biomemakeover:marigold>,
+    <item:biomemakeover:black_thistle>,
+    <item:biomemakeover:foxglove>,
+    <item:biomemakeover:cowboy_hat>,
+    <item:biomemakeover:poltergeist>,
+    <item:biomemakeover:ectoplasm>,
+] as IItemStack[];
+
+for item in toRemoveAndHide {
+    Jei.hideIngredient(item);
+    craftingTable.remove(item);
+    item.addTooltip("You're not supposed to get this. How?");
 }
