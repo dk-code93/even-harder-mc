@@ -88,7 +88,7 @@
 		"Soul Speed change" = true
 		#How much damage is multiplied when hurt on Soul Speed blocks
 		#Range: 0.0 ~ 1.7976931348623157E308
-		"Damage factor" = 1.5
+		"Damage factor" = 1.25
 
 	[tweaks.experience]
 
@@ -127,7 +127,7 @@
 			"Anvil ingot repairing" = true
 			#The amount of tries it should take on average to repair an anvil with an ingot (1 in x chance)
 			#Range: > 0
-			"Ingot repair chance" = 5
+			"Ingot repair chance" = 3
 			#If anvil transaction costs should be capped at a certain level
 			"Cap anvil costs" = false
 			#The max amount of levels an anvil transaction should be able to cost
@@ -138,9 +138,9 @@
 
 	[curses.ascension_curse]
 		#Curse that causes the cursed item to float upwards when dropped
-		"Enable Curse of Ascension" = true
+		"Enable Curse of Ascension" = false
 
 	[curses.fleeting_curse]
 		#Curse that causes nearby entities to repel the cursed item
-		"Enable Curse of Fleeting" = true
+		"Enable Curse of Fleeting" = false
 

@@ -11,7 +11,7 @@ import crafttweaker.api.loot.modifier.CommonLootModifiers;
 import crafttweaker.api.loot.LootTable;
 import crafttweaker.api.item.IItemStack;
 
-# Add Nether Crystal to Ruined portal chests
+# Add Nether Crystal to dungeon chests
 loot.modifiers.register(
     "remove_nether_crystal",
     LootConditions.only(LootTableIdLootCondition.create(<resource:minecraft:entities/warden>)),
@@ -39,12 +39,6 @@ loot.modifiers.register(
     LootConditions.only(LootTableIdLootCondition.create(<resource:betterwitchhuts:chests/hut_0>)),
     CommonLootModifiers.addWithChance(<item:nether_remastered:seal_piece_2> % 100)
 );
-
-// loot.modifiers.register(
-//     "add_seal_shard_2_entity",
-//     LootConditions.only(LootTableIdLootCondition.create(<resource:endrem:minecraft/entities/witch>)),
-//     CommonLootModifiers.addWithChance(<item:nether_remastered:seal_piece_2> % 20)
-// );
 
 # Move Nether Seal 3 to Illusioner
 loot.modifiers.register(
@@ -87,14 +81,6 @@ loot.modifiers.register(
         ]),
     CommonLootModifiers.addWithChance(<item:nether_remastered:seal_piece_1> % 40)
 );
-
-// loot.modifiers.register(
-//     "add_seal_shard_1_uncommon",
-//     LootConditions.anyOf([
-//         LootTableIdLootCondition.create(<resource:friendsandfoes:entities/iceologer>),
-//         ]),
-//     CommonLootModifiers.addWithChance(<item:nether_remastered:seal_piece_1> % 60)
-// );
 
 # Move Corrupted Eye to Pillager Bastille
 loot.modifiers.register(
@@ -161,5 +147,12 @@ loot.modifiers.register(
     LootConditions.anyOf([
         LootTableIdLootCondition.create(<resource:friendsandfoes:barrels/iceologer_cabin>),
         ]),
-    CommonLootModifiers.addWithChance(<item:endrem:cold_eye> % 30)
+    CommonLootModifiers.addWithChance(<item:endrem:cold_eye> % 20)
+);
+
+# Cryptic Eye to Adjudicator
+loot.modifiers.register(
+    "add_cryptic_eye",
+    LootConditions.only(LootTableIdLootCondition.create(<resource:biomemakeover:entities/adjudicator>)),
+    CommonLootModifiers.add(<item:endrem:cryptic_eye>)
 );

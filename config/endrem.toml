@@ -7,5 +7,5 @@
 	#Toggle Ender Eyes Actions (Throwing and Placing in Portal Frames)
 	ender_eyes = false
 	#Determine if it's possible to obtain the cryptic eye when enchanting
-	is_cryptic_eye_obtainable = true
+	is_cryptic_eye_obtainable = false
 
