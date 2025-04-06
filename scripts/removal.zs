@@ -16,6 +16,7 @@ val craftingRemovalByName = [
     "delightful:torch_from_animal_oil_bottle",
     "delightful:candle_from_animal_fat",
     "minecraft:soul_torch",
+    "biomemakeover:phantom_membrane",
     // "map_atlases:craft_atlas",
     # Working Stations
     "minecraft:furnace",
@@ -192,6 +193,17 @@ val toRemoveAndHide = [
     <item:biomemakeover:cowboy_hat>,
     <item:biomemakeover:poltergeist>,
     <item:biomemakeover:ectoplasm>,
+    <item:biomemakeover:glowfish_bucket>,
+    <item:biomemakeover:glowfish>,
+    <item:biomemakeover:cooked_glowfish>,
+    <item:biomemakeover:bulbus_root>,
+    <item:biomemakeover:roasted_bulbus_root>,
+    <item:biomemakeover:raw_crab>,
+    <item:biomemakeover:cooked_crab>,
+    <item:biomemakeover:crab_chowder>,
+    <item:biomemakeover:scuttler_tail>,
+    <item:biomemakeover:cattail>,
+    <item:biomemakeover:reed>,
 ] as IItemStack[];
 
 for item in toRemoveAndHide {
