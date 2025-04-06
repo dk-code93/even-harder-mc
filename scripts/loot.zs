@@ -9,6 +9,7 @@ import crafttweaker.api.loot.condition.builder.LootTableIdLootConditionBuilder;
 import crafttweaker.api.loot.modifier.ILootModifier;
 import crafttweaker.api.loot.modifier.CommonLootModifiers;
 import crafttweaker.api.loot.LootTable;
+import mods.jeitweaker.Jei;
 import crafttweaker.api.item.IItemStack;
 
 # Add Nether Crystal to dungeon chests
@@ -151,8 +152,5 @@ loot.modifiers.register(
 );
 
 # Cryptic Eye to Adjudicator
-loot.modifiers.register(
-    "add_cryptic_eye",
-    LootConditions.only(LootTableIdLootCondition.create(<resource:biomemakeover:entities/adjudicator>)),
-    CommonLootModifiers.add(<item:endrem:cryptic_eye>)
-);
+# Script got moved to datapack in KubeJS because it didn't work here for whatever reason
+Jei.addIngredient(<item:endrem:cryptic_eye>);
