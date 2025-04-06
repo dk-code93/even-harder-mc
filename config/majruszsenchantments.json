@@ -112,7 +112,7 @@
   },
   "curses": {
     "breaking_curse": {
-      "is_enabled": true,
+      "is_enabled": false,
       "damage_multiplier_per_level": 1.0
     },
     "corrosion_curse": {
