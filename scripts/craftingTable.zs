@@ -217,3 +217,33 @@ craftingTable.addShapedMirrored("water_bottle_dough", MirrorAxis.ALL, <item:farm
     [wheat, wheat], 
     [wheat, waterBottle.transformReplace(<item:minecraft:glass_bottle>)]
 ]);
+
+# Terracotta Bricks Integration
+val colors = [
+  "white",
+  "orange",
+  "magenta",
+  "light_blue",
+  "yellow",
+  "lime",
+  "pink",
+  "gray",
+  "light_gray",
+  "cyan",
+  "purple",
+  "blue",
+  "brown",
+  "green",
+  "red",
+  "black",
+] as string[];
+
+for color in colors {
+    val cwBlock = <item:clayworks:${color}_terracotta_bricks>;
+    val bmBlock = <item:biomemakeover:${color}_terracotta_bricks>;
+    craftingTable.remove(cwBlock);
+    craftingTable.addShaped(color + "_terracotta_brick_cw", cwBlock, [
+        [bmBlock, bmBlock],
+        [bmBlock, bmBlock]
+    ]);
+}
