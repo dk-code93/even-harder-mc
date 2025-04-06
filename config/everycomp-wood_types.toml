@@ -7,9 +7,9 @@
 			cherry = true
 
 		[types.wood_type.biomemakeover]
-			blighted_balsa = true
-			willow = true
-			swamp_cypress = true
+			blighted_balsa = false
+			willow = false
+			swamp_cypress = false
 			ancient_oak = true
 
 	[types.leaves_type]
