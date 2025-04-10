@@ -6,6 +6,7 @@ import crafttweaker.api.item.IItemStack;
 import mods.jeitweaker.Jei;
 import mods.jeitweaker.ingredient.JeiIngredient;
 import crafttweaker.api.text.Component;
+import crafttweaker.api.text.FormattedText;
 
 #Crafting Table
 val craftingRemovalByName = [
@@ -209,5 +210,5 @@ val toRemoveAndHide = [
 for item in toRemoveAndHide {
     Jei.hideIngredient(item);
     craftingTable.remove(item);
-    item.addTooltip("You're not supposed to get this. How?");
+    item.addTooltip("§4You're not supposed to get this. How?");
 }
