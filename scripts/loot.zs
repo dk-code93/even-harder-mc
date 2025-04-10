@@ -169,3 +169,6 @@ loot.modifiers.register(
         ]),
     CommonLootModifiers.addWithChance(<item:takesapillage:ravager_horn> % 30)
 );
+
+# Remove Illunite from all loot tables
+CommonLootModifiers.remove(<item:biomemakeover:illunite_shard>);
