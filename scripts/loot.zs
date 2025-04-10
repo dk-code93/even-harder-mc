@@ -154,3 +154,18 @@ loot.modifiers.register(
 # Cryptic Eye to Adjudicator
 # Script got moved to datapack in KubeJS because it didn't work here for whatever reason
 Jei.addIngredient(<item:endrem:cryptic_eye>);
+
+# Move the Ravager horn to the mansion chest
+loot.modifiers.register(
+    "remove_ravager_horn",
+    LootConditions.only(LootTableIdLootCondition.create(<resource:minecraft:entities/ravager>)),
+    CommonLootModifiers.remove(<item:takesapillage:ravager_horn>)
+);
+
+loot.modifiers.register(
+    "add_ravager_horn",
+    LootConditions.anyOf([
+        LootTableIdLootCondition.create(<resource:biomemakeover:mansion/dungeon_good>),
+        ]),
+    CommonLootModifiers.addWithChance(<item:takesapillage:ravager_horn> % 30)
+);

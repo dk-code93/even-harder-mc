@@ -21,7 +21,7 @@
 [Blacklist]
 	#Decides the spawnCount of spawns a spawner can have in BLACKLIST mode [Default: 20]
 	#Range: > 1
-	blacklistMaxSpawnCount = 16
+	blacklistMaxSpawnCount = 32
 	#Decides which mobs don't age a spawner (requires spawnerMode to be set to BLACKLIST) 
 	#[syntax: 'modid:entity']
 	blacklist = [""]
