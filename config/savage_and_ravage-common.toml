@@ -15,7 +15,7 @@
 		#This restores 2 health and gives them a projectile-proof shield for 30 seconds
 		#When their shield runs out, evokers cannot use totems for another 90 seconds
 		"Evokers use totems" = false
-		"Vex health is reduced to 2" = true
+		"Vex health is reduced to 2" = false
 
 [compat]
 

@@ -33,7 +33,7 @@ villagerTrades.addTrade(cleric, 2, (entity, random) => {
         <item:minecraft:redstone> * 21,
     ] as IItemStack[];
 
-    return new MerchantOffer(twoBuy[random.nextInt(2)], emerald * 5, 6, 10, 0.05);
+    return new MerchantOffer(twoBuy[random.nextInt(2)], emerald, 6, 10, 0.05);
 });
 
 villagerTrades.addTrade(cleric, 2, emerald, <item:minecraft:glowstone_dust> * 4, 5, 12, 0.05);
