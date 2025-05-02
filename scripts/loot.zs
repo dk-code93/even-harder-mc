@@ -5,6 +5,7 @@ import crafttweaker.api.loot.condition.LootConditions;
 import crafttweaker.api.loot.condition.LootCondition;
 import crafttweaker.api.loot.condition.builder.LootConditionBuilder;
 import crafttweaker.api.loot.condition.LootTableIdLootCondition;
+import crafttweaker.api.loot.condition.LootTableIdRegexLootCondition;
 import crafttweaker.api.loot.condition.builder.LootTableIdLootConditionBuilder;
 import crafttweaker.api.loot.modifier.ILootModifier;
 import crafttweaker.api.loot.modifier.CommonLootModifiers;
@@ -171,4 +172,13 @@ loot.modifiers.register(
 );
 
 # Remove Illunite from all loot tables
-CommonLootModifiers.remove(<item:biomemakeover:illunite_shard>);
+loot.modifiers.register(
+    "remove_illunite_shards",
+    LootConditions.anyOf([
+        LootTableIdRegexLootCondition.create("minecraft:chests/*"),
+        LootTableIdRegexLootCondition.create("minecraft:entities/*"),
+        LootTableIdRegexLootCondition.create("biomemakeover:chests/*"),
+        LootTableIdRegexLootCondition.create("biomemakeover:entities/*")
+    ]),
+    CommonLootModifiers.removeAll(<item:biomemakeover:illunite_shard>)
+);
