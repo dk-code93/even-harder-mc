@@ -55,6 +55,8 @@ val craftingRemovalByItem = [
     <item:craftingautomat:autocrafter>,
     // <item:abundant_atmosphere:brazier>,
     // <item:abundant_atmosphere:soul_brazier>,
+    # End Eyes
+    <item:endrem:witch_eye>,
     # Misc
     <item:sleep_tight:night_bag>,
 ] as IItemStack[];

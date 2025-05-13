@@ -248,3 +248,18 @@ for color in colors {
         [bmBlock, bmBlock]
     ]);
 }
+
+# Reworked End Eyes
+val blueIce = <item:minecraft:blue_ice>;
+
+craftingTable.addShaped("cold_eye_reworked", <item:endrem:cold_eye>, [
+    [blueIce, <item:friendsandfoes:totem_of_freezing>, blueIce],
+    [blueIce, enderEye, blueIce],
+    [blueIce, blueIce, blueIce],
+]);
+
+craftingTable.addShaped("witch_eye_reworked", <item:endrem:witch_eye>, [
+    [empty, <item:endrem:witch_pupil>, empty],
+    [<item:minecraft:potion>.withTag({Potion: "minecraft:strong_turtle_master"}).transformReplace(<item:minecraft:glass_bottle>), enderEye, <item:minecraft:potion>.withTag({Potion: "minecraft:long_invisibility"}).transformReplace(<item:minecraft:glass_bottle>)],
+    [empty, <item:minecraft:potion>.withTag({Potion: "minecraft:strong_harming"}).transformReplace(<item:minecraft:glass_bottle>), empty],
+]);

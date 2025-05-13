@@ -143,14 +143,23 @@ loot.modifiers.register(
     CommonLootModifiers.add(<item:endrem:old_eye>)
 );
 
-# Cold Eye to Icologer hut
+# Cold Eye to craftable
 loot.modifiers.register(
-    "add_cold_eye",
+    "remove_cold_eye",
     LootConditions.anyOf([
-        LootTableIdLootCondition.create(<resource:friendsandfoes:barrels/iceologer_cabin>),
+        LootTableIdLootCondition.create(<resource:endrem:minecraft/chests/igloo_chest>),
+        LootTableIdLootCondition.create(<resource:minecraft/chests/igloo_chest>),
         ]),
-    CommonLootModifiers.addWithChance(<item:endrem:cold_eye> % 20)
+    CommonLootModifiers.remove(<item:endrem:cold_eye>)
 );
+
+// loot.modifiers.register(
+//     "add_cold_eye",
+//     LootConditions.anyOf([
+//         LootTableIdLootCondition.create(<resource:friendsandfoes:barrels/iceologer_cabin>),
+//         ]),
+//     CommonLootModifiers.addWithChance(<item:endrem:cold_eye> % 20)
+// );
 
 # Cryptic Eye to Adjudicator
 # Script got moved to datapack in KubeJS because it didn't work here for whatever reason
