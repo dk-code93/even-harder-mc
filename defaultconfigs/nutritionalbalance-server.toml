@@ -119,7 +119,7 @@
 		#List of simple sugars.
 		sugars_item_list = ["#nourish:sweets"]
 		#List of proteins.
-		protein_item_list = ["#forge:protein", "#forge:milk", "#forge:yogurt", "#forge:nuts", "#nourish:protein"]
+		protein_item_list = ["#forge:protein", "#forge:yogurt", "#forge:nuts", "#nourish:protein"]
 		#List of fruits.
 		fruits_item_list = ["#forge:fruits", "#nourish:fruit"]
 
