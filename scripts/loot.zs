@@ -84,7 +84,7 @@ loot.modifiers.register(
     CommonLootModifiers.addWithChance(<item:nether_remastered:seal_piece_1> % 40)
 );
 
-# Move Corrupted Eye to Pillager Bastille
+# Move Corrupted Eye to Adjudicator
 loot.modifiers.register(
     "remove_corrupted_eye",
     LootConditions.anyOf([
@@ -94,24 +94,24 @@ loot.modifiers.register(
     CommonLootModifiers.remove(<item:endrem:corrupted_eye>)
 );
 
-loot.modifiers.register(
-    "add_corrupted_eye_rare",
-    LootConditions.anyOf([
-        LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/center>),
-        LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/farm>),
-        ]),
-    CommonLootModifiers.addWithChance(<item:endrem:corrupted_eye> % 30)
-);
+// loot.modifiers.register(
+//     "add_corrupted_eye_rare",
+//     LootConditions.anyOf([
+//         LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/center>),
+//         LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/farm>),
+//         ]),
+//     CommonLootModifiers.addWithChance(<item:endrem:corrupted_eye> % 30)
+// );
 
-loot.modifiers.register(
-    "add_corrupted_eye_uncommon",
-    LootConditions.anyOf([
-        LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/church>),
-        LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/gallows>),
-        LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/graveyard>),
-        ]),
-    CommonLootModifiers.addWithChance(<item:endrem:corrupted_eye> % 60)
-);
+// loot.modifiers.register(
+//     "add_corrupted_eye_uncommon",
+//     LootConditions.anyOf([
+//         LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/church>),
+//         LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/gallows>),
+//         LootTableIdLootCondition.create(<resource:takesapillage:chests/bastille/graveyard>),
+//         ]),
+//     CommonLootModifiers.addWithChance(<item:endrem:corrupted_eye> % 60)
+// );
 
 # Jungle Eye moved to Temple Treasure
 loot.modifiers.register(
@@ -160,10 +160,6 @@ loot.modifiers.register(
 //         ]),
 //     CommonLootModifiers.addWithChance(<item:endrem:cold_eye> % 20)
 // );
-
-# Cryptic Eye to Adjudicator
-# Script got moved to datapack in KubeJS because it didn't work here for whatever reason
-Jei.addIngredient(<item:endrem:cryptic_eye>);
 
 # Move the Ravager horn to the mansion chest
 loot.modifiers.register(
