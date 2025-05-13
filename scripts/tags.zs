@@ -127,3 +127,21 @@ val tagsToRemove = [
 for tag in tagsToRemove {
     tag.clear();
 }
+
+# Nutrient tags
+
+val addCarbs = [
+    <item:farmersdelight:pie_crust>,
+] as IItemStack[];
+
+for item in addCarbs {
+    <tag:items:forge:nutrients/carbs>.add(item);
+}
+
+val removeProtein = [
+    <item:minecraft:cocoa_beans>,
+] as IItemStack[];
+
+for item in removeProtein {
+    <tag:items:forge:nutrients/proteins>.remove(item);
+}
