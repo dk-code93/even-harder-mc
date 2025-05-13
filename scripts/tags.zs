@@ -122,6 +122,7 @@ for item in triggersFishing {
 val tagsToRemove = [
     <tag:worldgen/biome:biomemakeover:has_structure/ghost_town>,
     <tag:worldgen/biome:biomemakeover:has_structure/sunken_ruin>,
+    <tag:mob_effect:thephantommenace:phantom_banisher>,
 ] as MCTag[];
 
 for tag in tagsToRemove {
