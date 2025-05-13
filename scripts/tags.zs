@@ -132,10 +132,38 @@ for tag in tagsToRemove {
 
 val addCarbs = [
     <item:farmersdelight:pie_crust>,
+    <item:farmersdelight:vegetable_noodles>,
+    <item:minecraft:cake>,
+    <item:farmersdelight:wheat_dough>,
 ] as IItemStack[];
 
 for item in addCarbs {
     <tag:items:forge:nutrients/carbs>.add(item);
+}
+
+val addVeggies = [
+    <item:farmersdelight:vegetable_noodles>,
+    <item:delightful:field_salad>,
+] as IItemStack[];
+
+for item in addVeggies {
+    <tag:items:forge:nutrients/vegetables>.add(item);
+}
+
+val addFruits = [
+    <item:delightful:field_salad>,
+] as IItemStack[];
+
+for item in addFruits {
+    <tag:items:forge:nutrients/fruits>.add(item);
+}
+
+val addSugars = [
+    <item:minecraft:cake>,
+] as IItemStack[];
+
+for item in addSugars {
+    <tag:items:forge:nutrients/sugars>.add(item);
 }
 
 val removeProtein = [
