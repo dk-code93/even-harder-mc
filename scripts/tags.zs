@@ -137,6 +137,7 @@ val addCarbs = [
     <item:minecraft:cake>,
     <item:minecraft:pumpkin_pie>,
     <item:farmersdelight:wheat_dough>,
+    <item:delightful:smore>,
 ] as IItemStack[];
 
 for item in addCarbs {
@@ -155,6 +156,7 @@ for item in addVeggies {
 val addFruits = [
     <item:delightful:field_salad>,
     <item:minecraft:pumpkin_pie>,
+    <item:farmersdelight:glow_berry_custard>,
 ] as IItemStack[];
 
 for item in addFruits {
@@ -164,6 +166,8 @@ for item in addFruits {
 val addSugars = [
     <item:minecraft:cake>,
     <item:minecraft:pumpkin_pie>,
+    <item:delightful:smore>,
+    <item:farmersdelight:glow_berry_custard>,
 ] as IItemStack[];
 
 for item in addSugars {
