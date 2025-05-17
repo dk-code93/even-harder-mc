@@ -54,11 +54,11 @@ villagerTrades.addTrade(cartographer, 3, TreasureMapForEmeralds.create(7, <resou
 villagerTrades.removeAllTrades(cartographer, 4);
 
 val levelFourBuy = [
-    <item:map_atlases:atlas>,
+    <item:spelunkery:magnetite_chunk>,
 ] as IItemStack[];
 
 for item in levelFourBuy {
-    villagerTrades.addTrade(cartographer, 4, item, emerald, 12, 12, 0.05);
+    villagerTrades.addTrade(cartographer, 4, item * 4, emerald, 12, 12, 0.05);
 }
 
 villagerTrades.addTrade(cartographer, 4, TreasureMapForEmeralds.create(7, <resource:betteroceanmonuments:better_ocean_monuments>, "Ocean Explorer Map", <constant:minecraft:world/map/decorationtype:monument>, 8, 16));
@@ -67,7 +67,7 @@ villagerTrades.addTrade(cartographer, 4, TreasureMapForEmeralds.create(7, <resou
 villagerTrades.removeAllTrades(cartographer, 5);
 
 villagerTrades.addTrade(cartographer, 5, (entity, random) => {
-  return new MerchantOffer(emerald * 24, <item:naturescompass:naturescompass>, 4, 30, 0.05);
+  return new MerchantOffer(emerald * 36, <item:naturescompass:naturescompass>, 4, 30, 0.05);
 });
 
 villagerTrades.addTrade(cartographer, 5, TreasureMapForEmeralds.create(7, <resource:minecraft:on_woodland_explorer_maps>, "Woodland Explorer Map", <constant:minecraft:world/map/decorationtype:mansion>, 8, 15));
