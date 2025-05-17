@@ -243,7 +243,7 @@ for color in colors {
     val cwBlock = <item:clayworks:${color}terracotta_bricks>;
     val bmBlock = <item:biomemakeover:${color}terracotta_bricks>;
     craftingTable.remove(cwBlock);
-    craftingTable.addShaped(color + "terracotta_brick_cw", cwBlock, [
+    craftingTable.addShaped(color + "terracotta_brick_cw", cwBlock * 4, [
         [bmBlock, bmBlock],
         [bmBlock, bmBlock]
     ]);
