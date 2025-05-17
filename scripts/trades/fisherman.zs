@@ -16,8 +16,8 @@ val fisherman = <profession:minecraft:fisherman>;
 villagerTrades.removeAllTrades(fisherman, 1);
 
 val levelOneBuy = [
-    <item:minecraft:cod> * 20,
-    <item:minecraft:salmon> * 16,
+    <item:minecraft:cod> * 24,
+    <item:minecraft:salmon> * 18,
 ] as IItemStack[];
 
 for item in levelOneBuy {
@@ -28,7 +28,7 @@ for item in levelOneBuy {
 villagerTrades.removeAllTrades(fisherman, 2);
 
 val levelTwoBuy = [
-    <item:minecraft:string> * 21,
+    <item:minecraft:string> * 24,
 ] as IItemStack[];
 
 for item in levelTwoBuy {
@@ -60,7 +60,7 @@ villagerTrades.addTrade(fisherman, 3, new EnchantedItemForEmeralds(<item:minecra
 # Level 4
 villagerTrades.removeAllTrades(fisherman, 4);
 
-villagerTrades.addTrade(fisherman, 4, <item:minecraft:pufferfish> * 6, emerald, 12, 12, 0.05);
+villagerTrades.addTrade(fisherman, 4, <item:minecraft:pufferfish> * 8, emerald, 12, 12, 0.05);
 
 
 villagerTrades.addTrade(fisherman, 4, (entity, random) => {

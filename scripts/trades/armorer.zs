@@ -70,12 +70,11 @@ villagerTrades.addTrade(armorer, 4, (entity, random) => {
 villagerTrades.addTrade(armorer, 4, (entity, random) => {
     val threeEnchants = [
         "minecraft:fire_protection",
-        "minecraft:protection",
         "minecraft:blast_protection",
         "minecraft:projectile_protection",
         "majruszsenchantments:magic_protection",
     ] as string[];
-  return new MerchantOffer(emerald * 8, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2, id: threeEnchants[random.nextInt(5)]}]}), 4, 16, 0.05);
+  return new MerchantOffer(emerald * 8, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2, id: threeEnchants[random.nextInt(4)]}]}), 4, 16, 0.05);
 });
 
 # Level 5
@@ -91,10 +90,5 @@ villagerTrades.addTrade(armorer, 4, (entity, random) => {
 });
 
 villagerTrades.addTrade(armorer, 5, (entity, random) => {
-  if(random.nextInt(2) == 1) {
-    return new MerchantOffer(emerald * 32, <item:minecraft:creeper_head>, <item:shieldexp:griefer_shield>, 1, 30, 0.05);
-  } else {
-    return new MerchantOffer(emerald * 32, <item:minecraft:nether_star>, <item:shieldexp:paragon_shield>, 1, 30, 0.05);
-  }
+  return new MerchantOffer(emerald * 8, <item:minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2, id: "minecraft:protection"}]}), 4, 16, 0.05);
 });
-

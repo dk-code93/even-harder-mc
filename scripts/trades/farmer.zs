@@ -51,8 +51,8 @@ villagerTrades.addTrade(farmer, 2, (entity, random) => {
 
 villagerTrades.addTrade(farmer, 2, (entity, random) => {
     val twoSell = [
-        <item:delightful:acorn> * 8,
-        <item:minecraft:apple> * 8,
+        <item:delightful:acorn> * 6,
+        <item:minecraft:apple> * 6,
     ] as IItemStack[];
 
     return new MerchantOffer(emerald * 4, twoSell[random.nextInt(2)], 5, 16, 0.05);
@@ -82,7 +82,7 @@ for item, value in levelThreeSell {
 villagerTrades.removeAllTrades(farmer, 4);
 
 val levelFourBuy = [
-    <item:minecraft:melon> * 12,
+    <item:minecraft:melon> * 14,
 ] as IItemStack[];
 
 for item in levelFourBuy {

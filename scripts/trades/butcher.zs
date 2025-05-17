@@ -16,11 +16,11 @@ val butcher = <profession:minecraft:butcher>;
 villagerTrades.removeAllTrades(butcher, 1);
 
 val levelOneBuy = [
-    <item:minecraft:chicken> * 21,
-    <item:minecraft:porkchop> * 21,
-    <item:minecraft:rabbit> * 21,
-    <item:minecraft:beef> * 21,
-    <item:minecraft:mutton> * 21,
+    <item:minecraft:chicken> * 28,
+    <item:minecraft:porkchop> * 28,
+    <item:minecraft:rabbit> * 28,
+    <item:minecraft:beef> * 28,
+    <item:minecraft:mutton> * 28,
 ] as IItemStack[];
 
 for item in levelOneBuy {
@@ -39,7 +39,7 @@ villagerTrades.addTrade(butcher, 2, (entity, random) => {
     return new MerchantOffer(twoBuy[random.nextInt(2)], emerald, 10, 12, 0.05);
 });
 
-villagerTrades.addTrade(butcher, 2, emerald * 4, <item:minecraft:egg> * 8, 5, 12, 0.05);
+villagerTrades.addTrade(butcher, 2, emerald * 4, <item:minecraft:egg> * 6, 5, 12, 0.05);
 
 # Level 3
 villagerTrades.removeAllTrades(butcher, 3);

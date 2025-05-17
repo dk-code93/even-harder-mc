@@ -30,7 +30,7 @@ villagerTrades.removeAllTrades(cleric, 2);
 villagerTrades.addTrade(cleric, 2, (entity, random) => {
     val twoBuy = [
         <item:minecraft:gold_ingot> * 12,
-        <item:minecraft:redstone> * 21,
+        <item:minecraft:redstone> * 27,
     ] as IItemStack[];
 
     return new MerchantOffer(twoBuy[random.nextInt(2)], emerald, 6, 10, 0.05);
@@ -42,7 +42,7 @@ villagerTrades.addTrade(cleric, 2, emerald, <item:minecraft:glowstone_dust> * 4,
 villagerTrades.removeAllTrades(cleric, 3);
 
 val levelThreeBuy = [
-    <item:minecraft:nether_wart> * 21,
+    <item:minecraft:nether_wart> * 30,
 ] as IItemStack[];
 
 for item in levelThreeBuy {
